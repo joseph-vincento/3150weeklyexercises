@@ -29,6 +29,12 @@ double cosine_distance(const double_vector & one, const double_vector & two) {
     double two_magnitude = magnitude(two);
 
     double d = dot_prod/(one_magnitude*two_magnitude) ;
+    if(d > 1.0) {
+        d = 1.0;
+    }
+    else if (d < -1.0) {
+        d = -1.0;
+    }
 
     return acos(d);
 }
