@@ -27,8 +27,8 @@ double Triangle3d::calc_point_distance(const Point3d &p1, const Point3d &p2) {
 }
 
 ostream &operator<<(ostream &out_stream, const Triangle3d &t) {
-    out_stream << "Point 1: x = " << t.get_p1().get_x() << ", y = " << t.get_p1().get_y() << ", z = " << t.get_p1().get_z() << endl
-        << "Point 2: x = " << t.get_p2().get_x() << ", y = " << t.get_p2().get_y() << ", z = " << t.get_p2().get_z() << endl
-        << "Point 3: x = " << t.get_p3().get_x() << ", y = " << t.get_p3().get_y() << ", z = " << t.get_p3().get_z() << endl;
+    out_stream << "Point 1: " << t.get_p1() << endl
+        << "Point 2: " << t.get_p2() << endl
+        << "Point 3: " << t.get_p3()<< endl;
     return out_stream;
 }   
