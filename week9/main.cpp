@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void user_input() {
+void get_user_input() {
     double x;
     double y;
     double z;
@@ -33,10 +33,7 @@ int main() {
     Point3d p2 = Point3d(-2 , 4 , 0);
     Point3d p3 = Point3d(-2, -2, 0);
 
-    Triangle3d t = Triangle3d();
-    t.set_p1(p1);
-    t.set_p2(p2);
-    t.set_p3(p3);
+    Triangle3d t = Triangle3d(p1, p2, p3);
 
     cout << "Demo" << endl;
     cout << "For the 3d triangle with points:" << endl;
@@ -51,7 +48,7 @@ int main() {
         cin >> in;
 
         if (in == 'y' || in == 'Y')
-            user_input();
+            get_user_input();
         else
             cont = false;
     }
