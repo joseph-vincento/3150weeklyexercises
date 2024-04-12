@@ -1,25 +1,22 @@
-#include "triangle.h"
+#include "point3d.h"
+#include "triangle3d.h"
 
 using namespace std;
 
 int main() {
-    Triangle t;
-    t.set_x(2.0);
-    t.set_y(4.0);
-    t.set_z(6.0);
-    cout << "First triangle" << endl;
-    cout << t << endl;
-    cout << t.get_area() << endl;
+    // Example taken from https://planetcalc.com/218/
+    Point3d p1 = Point3d(1, 1, 0);
+    Point3d p2 = Point3d(-2 , 4 , 0);
+    Point3d p3 = Point3d(-2, -2, 0);
 
-    Triangle t2 = Triangle(t);
-    cout << "Copy of first triangle" << endl;
-    cout << t2 << endl;
-    cout << t2.get_area() << endl;
+    Triangle3d t = Triangle3d();
+    t.set_p1(p1);
+    t.set_p2(p2);
+    t.set_p3(p3);
 
-    Triangle t3(6.9, 15.0, 17.0);
-    cout << "Second triangle" << endl;
-    cout << t3 << endl;
-    cout << t3.get_area() << endl;
+    cout << "For the 3d triangle with points:" << endl;
+    cout << t;
+    cout << "The area of the triangle is " << t.calc_area() << endl;;
 
     return 0;
 }
